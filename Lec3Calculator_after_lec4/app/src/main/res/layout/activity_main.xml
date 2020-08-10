@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#565a5d"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvDisplay"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="bottom|right"
+        android:text="@string/btnZero"
+        android:textColor="#FBFAFA"
+        android:textSize="66sp"
+        app:layout_constraintBottom_toTopOf="@+id/gh10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="RtlHardcoded" />
+
+    <Button
+        android:id="@+id/btnPI"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:backgroundTint="#67686c"
+        android:onClick="performOperation"
+        android:text="@string/btnPi"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/gh25"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@+id/gv25"
+        app:layout_constraintTop_toTopOf="@id/gh10" />
+
+    <Button
+        android:id="@+id/btnSqrt"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:backgroundTint="#67686c"
+        android:onClick="performOperation"
+        android:text="@string/btnSquareRoot"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/gh25"
+        app:layout_constraintLeft_toLeftOf="@+id/gv25"
+        app:layout_constraintRight_toRightOf="@+id/gv50"
+        app:layout_constraintTop_toTopOf="@id/gh10" />
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:backgroundTint="#67686c"
+        android:onClick="backSpace"
+        android:text="@string/back"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/gh25"
+        app:layout_constraintLeft_toLeftOf="@+id/gv50"
+        app:layout_constraintRight_toRightOf="@+id/gv75"
+        app:layout_constraintTop_toTopOf="@id/gh10" />
+
+
+    <Button
+        android:id="@+id/btnAC"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:backgroundTint="#67686c"
+        android:onClick="clear"
+        android:text="@string/btnAC"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/gh40"
+        app:layout_constraintEnd_toStartOf="@+id/gv25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/gh25" />
+
+    <Button
+        android:id="@+id/btn0"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:backgroundTint="#818286"
+        android:onClick="digitTapped"
+        android:text="@string/btn0"
+        android:textColor="#FBF8F8"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/gv50"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/gh85" />
+
+    <Button
+        android:id="@+id/btnDot"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:backgroundTint="#818286"
+        android:onClick="decimalTapped"
+        android:text="@string/btnDecimalDot"
+        android:textColor="#F4F1F1"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/gv75"
+        app:layout_constraintStart_toStartOf="@+id/gv50"
+        app:layout_constraintTop_toTopOf="@+id/gh85" />
+
+    <Button
+        android:id="@+id/btnEquals"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:backgroundTint="#F1A23D"
+        android:onClick="performOperation"
+        android:text="@string/btnEquals"
+        android:textColor="#FAF7F7"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/gv75"
+        app:layout_constraintTop_toTopOf="@+id/gh85" />
+
+    <Button
+        android:id="@+id/btn7"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:backgroundTint="#818286"
+        android:onClick="digitTapped"
+        android:text="@string/btn7"
+        android:textColor="#F8F5F5"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/gh55"
+        app:layout_constraintEnd_toStartOf="@+id/gv25"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/gh40"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btn8"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:backgroundTint="#818286"
+        android:onClick="digitTapped"
+        android:text="@string/btn8"
+        android:textColor="#F4F1F1"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/gh55"
+        app:layout_constraintEnd_toStartOf="@+id/gv50"
+        app:layout_constraintStart_toStartOf="@+id/gv25"
+        app:layout_constraintTop_toTopOf="@+id/gh40" />
+
+    <Button
+        android:id="@+id/btn9"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:backgroundTint="#818286"
+        android:onClick="digitTapped"
+        android:text="@string/btn9"
+        android:textColor="#FAF8F8"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/gh55"
+        app:layout_constraintEnd_toStartOf="@+id/gv75"
+        app:layout_constraintStart_toStartOf="@+id/gv50"
+        app:layout_constraintTop_toTopOf="@+id/gh40" />
+
+    <Button
+        android:id="@+id/btnPlus"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:backgroundTint="#F1A23D"
+        android:onClick="performOperation"
+        android:text="@string/btnPlus"
+        android:textColor="#FAF7F7"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/gh85"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/gv75"
+        app:layout_constraintTop_toTopOf="@+id/gh70" />
+
+    <Button
+        android:id="@+id/btnMinus"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:backgroundTint="#F1A23D"
+        android:onClick="performOperation"
+        android:text="@string/btnMinus"
+        android:textColor="#FDFCFC"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/gh70"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/gv75"
+        app:layout_constraintTop_toTopOf="@+id/gh55" />
+
+    <Button
+        android:id="@+id/btnMult"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:backgroundTint="#F1A23D"
+        android:onClick="performOperation"
+        android:text="@string/btnMult"
+        android:textAllCaps="false"
+        android:textColor="#FBFBFB"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/gh55"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/gv75"
+        app:layout_constraintTop_toTopOf="@+id/gh40"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/btnDivide"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:backgroundTint="#F1A23D"
+        android:onClick="performOperation"
+        android:text="@string/btnDiv"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/gh40"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/gv75"
+        app:layout_constraintTop_toTopOf="@+id/gh25" />
+
+    <Button
+        android:id="@+id/btn4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:backgroundTint="#818286"
+        android:onClick="digitTapped"
+        android:text="@string/btn4"
+        android:textColor="#FBF9F9"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/gh70"
+        app:layout_constraintEnd_toStartOf="@+id/gv25"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/gh55"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btn5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:backgroundTint="#818286"
+        android:onClick="digitTapped"
+        android:text="@string/btn5"
+        android:textColor="#FAF8F8"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/gh70"
+        app:layout_constraintEnd_toStartOf="@+id/gv50"
+        app:layout_constraintStart_toStartOf="@+id/gv25"
+        app:layout_constraintTop_toTopOf="@+id/gh55" />
+
+    <Button
+        android:id="@+id/btn6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:backgroundTint="#818286"
+        android:onClick="digitTapped"
+        android:text="@string/btn6"
+        android:textColor="#FBFBFB"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/gh70"
+        app:layout_constraintEnd_toStartOf="@+id/gv75"
+        app:layout_constraintStart_toStartOf="@+id/gv50"
+        app:layout_constraintTop_toTopOf="@+id/gh55" />
+
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:backgroundTint="#818286"
+        android:focusableInTouchMode="false"
+        android:hapticFeedbackEnabled="false"
+        android:onClick="digitTapped"
+        android:text="@string/btn1"
+        android:textColor="#F6F6F6"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/gh85"
+        app:layout_constraintEnd_toStartOf="@+id/gv25"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/gh70"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:backgroundTint="#818286"
+        android:onClick="digitTapped"
+        android:text="@string/btn2"
+        android:textColor="#FAF8F8"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/gh85"
+        app:layout_constraintEnd_toStartOf="@+id/gv50"
+        app:layout_constraintStart_toEndOf="@+id/btn7"
+        app:layout_constraintTop_toTopOf="@+id/gh70" />
+
+    <Button
+        android:id="@+id/btn3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:backgroundTint="#818286"
+        android:onClick="digitTapped"
+        android:text="@string/btn3"
+        android:textColor="#F3F2F2"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/gh85"
+        app:layout_constraintEnd_toStartOf="@+id/gv75"
+        app:layout_constraintStart_toStartOf="@+id/gv50"
+        app:layout_constraintTop_toTopOf="@+id/gh70" />
+
+    <Button
+        android:id="@+id/btnPositiveNegative"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:backgroundTint="#67686c"
+        android:onClick="performOperation"
+        android:text="@string/btnPlusMinus"
+        android:textColor="#FAF6F6"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/gh40"
+        app:layout_constraintStart_toStartOf="@+id/gv25"
+        app:layout_constraintEnd_toEndOf="@+id/gv50"
+        app:layout_constraintTop_toTopOf="@+id/gh25" />
+
+    <Button
+        android:id="@+id/btnPercentage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:backgroundTint="#67686c"
+        android:onClick="performOperation"
+        android:text="@string/btnPercentage"
+        android:textColor="#FDFAFA"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/gh40"
+        app:layout_constraintEnd_toEndOf="@+id/gv75"
+        app:layout_constraintStart_toStartOf="@+id/gv50"
+        app:layout_constraintTop_toTopOf="@+id/gh25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gv75"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gv25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gh70"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.7" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gh55"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.55" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gh40"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gh25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gh10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gh85"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gv50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

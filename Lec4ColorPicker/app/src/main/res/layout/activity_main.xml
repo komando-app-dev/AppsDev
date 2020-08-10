@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <!-- read about Hex representation -->
+    <!-- practice this with constraint layout -->
+    <!-- LinearLayout *xml -->
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <SeekBar
+            android:id="@+id/sbRed"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:max="255"
+            android:progress="128" />
+
+        <EditText
+            android:id="@+id/etRed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="255"
+            android:inputType="number"
+            android:text="128" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <SeekBar
+            android:id="@+id/sbGreen"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:max="255"
+            android:progress="128" />
+
+        <EditText
+            android:id="@+id/etGreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="255"
+            android:inputType="number"
+            android:text="128" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <SeekBar
+            android:id="@+id/sbBlue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:max="255"
+            android:progress="128" />
+
+        <EditText
+            android:id="@+id/etBlue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="255"
+            android:inputType="number"
+            android:text="128" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#808080"
+        android:gravity="center"
+        android:text="#808080" />
+
+</LinearLayout>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Lec1</string>
+    <string name="hello">Hello World, My Name is Tomer</string>
+    <string name="button_toast_label">Toast</string>
+    <string name="button_count_label">Count</string>
+    <string translatable="false" name="text_counter_initial_value">0</string>
+    <string name="toast_message">Hello, Toast</string>
+</resources>
