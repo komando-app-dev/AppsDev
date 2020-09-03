@@ -2,6 +2,7 @@ package tomerbu.edu.lec15retrofit.movies;
 
 import androidx.room.Dao;
 import androidx.room.Insert;
+import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 
 import java.util.List;
@@ -17,12 +18,14 @@ import java.util.List;
 @Dao()
 public interface MovieDao {
     //save all the movies
-    @Insert
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     void save(List<Movie> movies);
 
     //get all the movies
 
     @Query("SELECT * FROM Movie")
     List<Movie> getMovies();
+
+
 
 }

@@ -1,10 +1,6 @@
 package tomerbu.edu.lec15retrofit.movies;
 
-import java.util.ArrayList;
-
-import retrofit2.Call;
 import retrofit2.Callback;
-import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -46,32 +42,8 @@ public class TMDBDataSource {
 
 
     //INTERNET
-    public void getMovies(/*callback*/) {
-
-
-        service.getMovies(apiKey).enqueue(new Callback<TMDBResponse>() {
-            @Override
-            public void onResponse(Call<TMDBResponse> call, Response<TMDBResponse> response) {
-                //call.request().url();
-                //https:tmdb/url?api_key=aaafffddd
-                TMDBResponse tmdbResponse = response.body();
-                if (tmdbResponse == null) return;
-
-
-                //UI Thread:
-                ArrayList<Movie> movies = tmdbResponse.getMovies();
-                System.out.println(movies);
-
-            }
-
-            @Override
-            public void onFailure(Call<TMDBResponse> call, Throwable t) {
-                t.printStackTrace();
-            }
-        });
-        //async לא מחזיר ערך
-        //עבודה מול האינטרנט צריכה להתבצע ברקע
-        //Response on the ui thread.
+    public void getMovies(Callback<TMDBResponse> callback) {
+        service.getMovies(apiKey).enqueue(callback);
     }
 
     //getTv()

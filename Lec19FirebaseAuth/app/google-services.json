@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "440123013069",
+    "firebase_url": "https://lec19firebaseauth-e5962.firebaseio.com",
+    "project_id": "lec19firebaseauth-e5962",
+    "storage_bucket": "lec19firebaseauth-e5962.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:440123013069:android:fca18cd7cd1c53f0dbf684",
+        "android_client_info": {
+          "package_name": "tomerbu.edu.lec19firebaseauth"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "440123013069-aempjdlat65mkif00dg3db7mranci9f8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBps54OKlKPUsASVrZd9AdWL7WOUYzD9qk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "440123013069-aempjdlat65mkif00dg3db7mranci9f8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

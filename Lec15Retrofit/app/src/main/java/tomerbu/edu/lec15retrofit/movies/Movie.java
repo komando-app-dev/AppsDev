@@ -17,6 +17,7 @@ public class Movie {
     //properties:
     private String title;
     private String overview;
+    //add String thumbnail
 
     @PrimaryKey
     private long id;

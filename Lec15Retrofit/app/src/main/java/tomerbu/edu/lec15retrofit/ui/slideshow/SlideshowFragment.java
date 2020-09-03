@@ -16,6 +16,7 @@ import tomerbu.edu.lec15retrofit.R;
 
 public class SlideshowFragment extends Fragment {
 
+    //WeakReference<Recy>
     private SlideshowViewModel slideshowViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -32,4 +33,17 @@ public class SlideshowFragment extends Fragment {
         });
         return root;
     }
+
+
+//    @Override
+//    public void onSaveInstanceState(@NonNull Bundle outState) {
+//        super.onSaveInstanceState(outState);
+//
+//        //when android saves -> save yours:
+//    }
+//
+//    @Override
+//    public void onViewStateRestored(@Nullable Bundle savedInstanceState) {
+//        super.onViewStateRestored(savedInstanceState);
+//    }
 }
